@@ -31,7 +31,7 @@ if st.button("Classify"):
     if not text_input.strip():
         st.warning("Please enter some text.")
     else:
-        inputs = tokenizer([text_input], padding=True, truncation=True, max_length=512, return_tensors="pt")
+        inputs = tokenizer([text_input], padding=True, truncation=True, max_length=1024, return_tensors="pt")
 
         with torch.no_grad():
             logits = model(**inputs).logits
@@ -82,3 +82,4 @@ st.markdown(
     "<small>Model: [durrani95/eurobert-geopolitical-multiclass](https://huggingface.co/durrani95/eurobert-geopolitical-multiclass)</small>",
     unsafe_allow_html=True
 )
+
