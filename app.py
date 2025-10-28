@@ -51,7 +51,6 @@ if st.button("Classify"):
         st.markdown("### 🧭 Prediction")
         st.write(f"**Predicted Category:** {label}")
         st.write(f"**Confidence:** {confidence:.2%}")
-        st.write(f"**Input Text:** {text_input}")
         st.divider()
 
         # --- Matplotlib bar chart ---
